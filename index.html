@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>VISCOPE 視覺效能評估</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>VISCOPE 視覺效能評估</h1>
+
+  <form id="questionnaire">
+
+    <div class="question">
+      <p>Q1 我在閱讀時容易感到吃力或需重新聚焦</p>
+      <select name="q1" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q2 近距離用眼 20–30 分鐘後會變模糊</p>
+      <select name="q2" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q3 遠距離看東西有時覺得不夠清楚，需要眨眼才能看清</p>
+      <select name="q3" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+      
+    <div class="question">
+      <p>Q4 從近距離看向遠距離時，視覺清晰度需要時間恢復</p>
+      <select name="q4" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立 </option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+     <div class="question">
+      <p>Q5 我覺得看小字或細節比他人更吃力</p>
+      <select name="q5" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+     <div class="question">
+      <p>Q6 明亮或反光環境容易影響我對細節的辨識度</p>
+      <select name="q6" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+     <div class="question">
+      <p>Q7 在低光源下，我的視覺表現明顯下降</p>
+      <select name="q7" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+     <div class="question">
+      <p>Q8 長時間近距離用眼後，眼睛會出現酸脹或壓力感</p>
+      <select name="q8" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+     <div class="question">
+      <p>Q9 我常需要靠得更近才能看清楚</p>
+      <select name="q9" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+     <div class="question">
+      <p>Q10 切換焦距（看近→看遠或看遠→看近）會使我感到不適</p>
+      <select name="q10" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q11 閱讀一段時間後，字體似乎變得更小或更難以集中</p>
+      <select name="q11" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q12 我的眼睛容易在長時間工作中「撐不住」</p>
+      <select name="q12" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q13 我常覺得視覺需要努力才能維持清晰度</p>
+      <select name="q13" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q14 眼睛容易在壓力或疲勞時更難對焦</p>
+      <select name="q14" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q15 我閱讀時容易跳字、漏行或需要反覆重讀</p>
+      <select name="q15" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q16 跟隨移動物體（例如球、移動文字）時不太順暢</p>
+      <select name="q16" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q17 追焦時常覺得「跟不上」</p>
+      <select name="q17" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q18 切換視線目標時會出現不穩定感或暫時模糊。</p>
+      <select name="q18" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q19 我覺得眼睛在閱讀時容易「跑掉」</p>
+      <select name="q19" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q20 需要目光快速轉移時，常覺得眼睛反應較慢</p>
+      <select name="q20" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q21 我經常感到眼睛乾澀、痠痛或緊繃</p>
+      <select name="q21" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q22 眼睛在長時間盯著螢幕後變得不舒服</p>
+      <select name="q22" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q23 強光、藍光或白光容易刺激眼睛</p>
+      <select name="q23" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q24 眼睛容易出現灼熱或異物感</p>
+      <select name="q24" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q25 我常覺得需要用力眨眼或揉眼來緩解不適</p>
+      <select name="q25" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q26 眼睛乾或不舒服時，我的視覺表現會下降</p>
+      <select name="q26" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q27 一天中後半段，我的視覺容易比早上更疲勞</p>
+      <select name="q27" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q28 我常覺得眼睛像黏住或分泌物較多</p>
+      <select name="q28" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q29 風吹、冷氣或騎車時眼睛容易乾</p>
+      <select name="q29" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q30 長時間睜眼不眨時（如專注螢幕），我的眼睛狀態明顯下滑</p>
+      <select name="q30" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q31 我經常需要使用人工淚液</p>
+      <select name="q31" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q32 我容易在早上起床時眼睛乾或有緊繃感</p>
+      <select name="q32" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q33 眼睛在生理期、睡不好或壓力大時更乾</p>
+      <select name="q33" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q34 我覺得眼睛整體耐受度比以前差</p>
+      <select name="q34" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q35 我每天使用螢幕（手機／電腦）超過 4 小時</p>
+      <select name="q35" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q36 我多數時間都在近距離工作或閱讀</p>
+      <select name="q36" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q37 外出日照時間較少</p>
+      <select name="q37" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q38 我愛熬夜、作息不固定或睡眠不足</p>
+      <select name="q38" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q39 視覺疲勞時，我的工作／學習效率會大幅下降</p>
+      <select name="q39" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <p>Q40 如果不用視覺輔助，我覺得生活品質會受到影響</p>
+      <select name="q40" required>
+        <option value="">請選擇</option>
+        <option value="1">1 完全不同意</option>
+        <option value="2">2 不同意</option>
+        <option value="3">3 中立</option>
+        <option value="4">4 同意</option>
+        <option value="5">5 完全同意</option>
+      </select>
+    </div>
+
+    <button type="submit" type="button">送出評估</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
