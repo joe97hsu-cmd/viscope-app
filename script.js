@@ -31,25 +31,35 @@ document.getElementById("questionnaire").addEventListener("submit", function (e)
   `;
 });
 let currentPage = 1;
-showPage(currentPage);
+const totalPages = 5; // 你一共 5 頁（1~7, 8~14, 15~20, 21~27, 28~34）
+
+const nextBtn = document.getElementById("nextBtn");
+const submitBtn = document.getElementById("submitBtn");
 
 function showPage(page) {
-  const questions = document.querySelectorAll('.question');
-  const buttons = document.querySelectorAll('.next-btn');
+  const questions = document.querySelectorAll(".question");
 
   questions.forEach(q => {
-    q.style.display = q.dataset.page == page ? 'block' : 'none';
+    const qPage = parseInt(q.dataset.page);
+    q.style.display = (qPage === page) ? "block" : "none";
   });
 
-  buttons.forEach(btn => {
-    btn.style.display = btn.dataset.next == page + 1 ? 'block' : 'none';
-  });
+  // 按鈕控制
+  if (page === totalPages) {
+    nextBtn.style.display = "none";
+    submitBtn.style.display = "inline-block";
+  } else {
+    nextBtn.style.display = "inline-block";
+    submitBtn.style.display = "none";
+  }
 }
 
-document.querySelectorAll('.next-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    currentPage = Number(btn.dataset.next);
+nextBtn.addEventListener("click", () => {
+  if (currentPage < totalPages) {
+    currentPage++;
     showPage(currentPage);
-    window.scrollTo(0, 0);
-  });
+  }
 });
+
+// 初始化
+showPage(currentPage);
