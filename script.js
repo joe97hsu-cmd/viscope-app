@@ -30,3 +30,26 @@ document.getElementById("questionnaire").addEventListener("submit", function (e)
     </p>
   `;
 });
+let currentPage = 1;
+showPage(currentPage);
+
+function showPage(page) {
+  const questions = document.querySelectorAll('.question');
+  const buttons = document.querySelectorAll('.next-btn');
+
+  questions.forEach(q => {
+    q.style.display = q.dataset.page == page ? 'block' : 'none';
+  });
+
+  buttons.forEach(btn => {
+    btn.style.display = btn.dataset.next == page + 1 ? 'block' : 'none';
+  });
+}
+
+document.querySelectorAll('.next-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    currentPage = Number(btn.dataset.next);
+    showPage(currentPage);
+    window.scrollTo(0, 0);
+  });
+});
