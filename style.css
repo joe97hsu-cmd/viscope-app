@@ -20,14 +20,32 @@ button {
   font-size: 16px;
 }
 
-#result {
-  margin-top: 30px;
-  background: #eef;
-  padding: 20px;
-  border-radius: 10px;
+/* 按鈕區 */
+.btn-area {
+  margin-top: 20px;
 }
 
-.note {
-  font-size: 12px;
-  color: gray;
+/* 結果頁 */
+.result-page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#resultCard {
+  max-width: 700px;
+  margin: 0 auto;
+  background: #f2f3ff;
+  border-radius: 12px;
+  padding: 24px 28px;
+}
+
+#result p {
+  margin: 10px 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+#result strong {
+  font-size: 18px;
+  color: #2c3e50;
 }

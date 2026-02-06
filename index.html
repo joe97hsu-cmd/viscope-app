@@ -7,11 +7,9 @@
 </head>
 <body>
 
-  <h1>VISCOPE 視覺效能評估</h1>
+<h1>VISCOPE 視覺效能評估</h1>
 
-  
-
-  <form id="questionnaire">
+<form id="questionnaire">
 
     <div class="question" data-page="1">
       <p>Q1 我在閱讀時容易感到吃力或需重新聚焦</p>
@@ -96,7 +94,6 @@
         <option value="5">5 完全同意</option>
       </select>
     </div>
-    <button class="next-btn" data-next="2">下一頁</button>
 
 
      <div class="question" data-page="2">
@@ -183,7 +180,6 @@
       </select>
     </div>
 
-    <button class="next-btn" data-next="3">下一頁</button>
 
     <div class="question" data-page="3">
       <p>Q15 我閱讀時容易跳字、漏行或需要反覆重讀</p>
@@ -257,7 +253,6 @@
       </select>
     </div>
 
-    <button class="next-btn" data-next="4">下一頁</button>
 
     <div class="question" data-page="4">
       <p>Q21 我經常感到眼睛乾澀、痠痛或緊繃</p>
@@ -343,7 +338,6 @@
       </select>
     </div>
 
-    <button class="next-btn" data-next="5">下一頁</button>
 
     <div class="question" data-page="5">
       <p>Q28 我常覺得眼睛像黏住或分泌物較多</p>
@@ -429,7 +423,6 @@
       </select>
     </div>
 
-    <button class="next-btn" data-next="6">下一頁</button>
 
     <div class="question" data-page="6">
       <p>Q35 我每天使用螢幕（手機／電腦）超過 4 小時</p>
@@ -503,17 +496,25 @@
       </select>
     </div>
 
-    <button type="submit" id="submitBtn" style="display:none;">
-  送出評估
-</button>
-
-  <div id="result"></div>
-
   
 <div style="margin-top: 20px;">
   <button type="button" id="nextBtn">下一頁</button>
-  <button type="submit" id="submitBtn" style="display:none;">送出評估</button>
+  <button type="submit" id="submitBtn" style="display:none;">
+    送出評估
+  </button>
 </div>
+
+<div class="question result-page" data-page="7">
+    <h2>評估結果</h2>
+    <div id="resultCard">
+      <div id="result"></div>
+    </div>
+  </div>
+
+  <!-- 按鈕區 -->
+
+
+</form>
 
 <script src="script.js"></script>
 </body>

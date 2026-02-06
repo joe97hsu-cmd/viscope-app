@@ -1,65 +1,83 @@
-document.getElementById("questionnaire").addEventListener("submit", function (e) {
-  e.preventDefault(); // 不刷新頁面
-
-  const formData = new FormData(e.target);
-
-  let totalScore = 0;
-
-  for (let value of formData.values()) {
-    totalScore += Number(value);
-  }
-
-  let level = "";
-
-  if (totalScore <= 100) {
-    level = "低效能級（視覺狀態良好）";
-  } else if (totalScore <= 130) {
-    level = "中低效能級（輕度疲勞）";
-  } else if (totalScore <= 160) {
-    level = "中高效能級（疲勞風險偏高）";
-  } else {
-    level = "高疲勞高負荷（建議專業評估）";
-  }
-
-  document.getElementById("result").innerHTML = `
-    <h2>評估結果</h2>
-    <p>總分：${totalScore}</p>
-    <p>等級：${level}</p>
-    <p class="note">
-      本結果僅供視覺狀態參考，不構成醫療診斷。
-    </p>
-  `;
-});
 let currentPage = 1;
-const totalPages = 5; // 你一共 5 頁（1~7, 8~14, 15~20, 21~27, 28~34）
+const totalPages = 7;
 
+const questions = document.querySelectorAll(".question");
 const nextBtn = document.getElementById("nextBtn");
 const submitBtn = document.getElementById("submitBtn");
+const form = document.getElementById("questionnaire");
+const resultDiv = document.getElementById("result");
 
 function showPage(page) {
-  const questions = document.querySelectorAll(".question");
-
   questions.forEach(q => {
-    const qPage = parseInt(q.dataset.page);
-    q.style.display = (qPage === page) ? "block" : "none";
+    q.style.display = q.dataset.page == page ? "block" : "none";
   });
 
-  // 按鈕控制
-  if (page === totalPages) {
+  if (page === 6) {
     nextBtn.style.display = "none";
     submitBtn.style.display = "inline-block";
   } else {
     nextBtn.style.display = "inline-block";
     submitBtn.style.display = "none";
   }
+
+  if (page === 7) {
+    nextBtn.style.display = "none";
+    submitBtn.style.display = "none";
+  }
 }
 
+// 初始顯示
+showPage(currentPage);
+
+// 下一頁
 nextBtn.addEventListener("click", () => {
-  if (currentPage < totalPages) {
-    currentPage++;
-    showPage(currentPage);
+  const currentSelects = document.querySelectorAll(
+    `.question[data-page="${currentPage}"] select`
+  );
+
+  for (let s of currentSelects) {
+    if (!s.value) {
+      alert("請完成本頁所有題目");
+      return;
+    }
   }
+
+  currentPage++;
+  showPage(currentPage);
 });
 
-// 初始化
-showPage(currentPage);
+// 送出評估
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  let totalScore = 0;
+  const selects = form.querySelectorAll("select");
+
+  selects.forEach(s => {
+    totalScore += Number(s.value);
+  });
+
+  let level = "";
+  let advice = "";
+
+  if (totalScore <= 80) {
+    level = "視覺狀況良好";
+    advice = "目前視覺負擔較低，請持續保持良好用眼習慣。";
+  } else if (totalScore <= 120) {
+    level = "中度視覺疲勞";
+    advice = "建議調整用眼時間，並適度休息。";
+  } else {
+    level = "高度視覺疲勞";
+    advice = "建議進一步進行專業視覺檢查與評估。";
+  }
+
+  // ⭐ 關鍵：結果只寫進「評估結果卡片內的 result」
+  resultDiv.innerHTML = `
+    <p><strong>總分：</strong>${totalScore}</p>
+    <p><strong>評估結果：</strong>${level}</p>
+    <p><strong>建議：</strong>${advice}</p>
+  `;
+
+  currentPage = 7;
+  showPage(currentPage);
+});
