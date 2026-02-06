@@ -8,20 +8,20 @@ const form = document.getElementById("questionnaire");
 const resultDiv = document.getElementById("result");
 
 function showPage(page) {
+  // 只顯示當頁
   questions.forEach(q => {
-    q.style.display = q.dataset.page == page ? "block" : "none";
+    q.style.display = (Number(q.dataset.page) === page) ? "block" : "none";
   });
 
-  if (page === 6) {
+  // 按鈕狀態
+  if (page === 7) {            // 最後一頁題目
     nextBtn.style.display = "none";
     submitBtn.style.display = "inline-block";
-  } else {
-    nextBtn.style.display = "inline-block";
-    submitBtn.style.display = "none";
-  }
-
-  if (page === 7) {
+  } else if (page === 8) {     // 結果頁
     nextBtn.style.display = "none";
+    submitBtn.style.display = "none";
+  } else {                     // 其他頁
+    nextBtn.style.display = "inline-block";
     submitBtn.style.display = "none";
   }
 }
@@ -78,6 +78,6 @@ form.addEventListener("submit", function (e) {
     <p><strong>建議：</strong>${advice}</p>
   `;
 
-  currentPage = 7;
+  currentPage = 8;
   showPage(currentPage);
 });
